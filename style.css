@@ -39,7 +39,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 100;
+    z-index: 1000;
     transition: 0.3s;
 }
 
@@ -53,6 +53,7 @@ body {
 }
 
 .navbar {
+    z-index: 1001;
     position: relative;
 }
 
@@ -84,13 +85,14 @@ section {
 }
 
 .home {
+    position: relative;
     display: flex;
     align-items: center;
     padding: 0 9%;
     background: url('images/portfolio1.png') no-repeat;
     background-size: cover;
     background-position: center;
-
+    z-index: 1;
 }
 
 .home-content {
@@ -123,6 +125,7 @@ section {
     background-image: linear-gradient(var(--main-colour), var(--main-colour));
     background-repeat: no-repeat;
     -webkit-animation: text;
+    animation: text;
     background-position: -33rem 0;
     
 }
@@ -271,17 +274,19 @@ section {
 .home-imgHover {
     position: absolute;
     top: 0;
-    right: 0;  /* Changed from left to right */
+    right: 0; 
     width: 45%;
     height: 100%;
+    opacity: 0.1;
     background: transparent;
     transition: 0.5s;  /* Faster transition */
     pointer-events: none; /* Allows clicking through it */
+    z-index: -1;
 }
 
 .home:hover .home-imgHover {
     background: var(--bg-colour);
-    opacity: 0.8;
+    opacity: 0.2;
 }
 
 .about {
@@ -713,7 +718,9 @@ span {
     width: 100%;
     height: 100%;
     background: var(--bg-colour);
-    z-index: 98;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0;
 }
 
 .animate.home-img {
@@ -724,6 +731,7 @@ span {
 .navbar .animate,
 #menu-icon .animate,
 .home.show-animate .animate {
+    display: none;
     animation: showRight 1s ease forwards;
     animation-delay: calc(0.3s * var(--i));
 }
@@ -779,11 +787,19 @@ section:nth-child(odd) .animate.scroll,
 
 @media (max-width: 768px) {
     .header {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
         background: var(--bg-colour);
+        padding-top: 10rem;
     }
 
     #menu-icon {
         display: block;
+        z-index: 1002;
     }
 
     .navbar {
@@ -800,6 +816,8 @@ section:nth-child(odd) .animate.scroll,
     }
 
     .navbar.active {
+        display: flex;
+        flex-direction: column;
         transition-delay: 0s;
         left: 0;
     }
