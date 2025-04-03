@@ -89,7 +89,7 @@ section {
     display: flex;
     align-items: center;
     padding: 0 9%;
-    background: url('images/portfolio1.png') no-repeat;
+    background: url('./images/portfolio1.png') no-repeat;
     background-size: cover;
     background-position: center;
     z-index: 1;
@@ -581,9 +581,11 @@ span {
 
 .projects-container {
     display: grid;
+    position: relative;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     gap: 2.5rem;
     padding: 0 5%;
+    z-index: 10;
 }
 
 .project-box {
@@ -592,6 +594,7 @@ span {
     box-shadow: 0 0 1rem var(--bg-colour);
     overflow: hidden;
     display: flex;
+    z-index: 11;
 }
 
 .project-box img {
@@ -705,6 +708,7 @@ span {
     background: transparent;
     border-radius: .6rem;
     border: .2rem solid var(--main-colour);
+    background: rgba(255,255,255,0.1);
 }
 
 .contact form .input-box .input-field input::placeholder,
@@ -805,6 +809,7 @@ span {
 /* animation reload & scroll  */
 .animate {
     position: absolute;
+    display: none;
     top: 0;
     right: 0;
     width: 100%;
@@ -951,6 +956,12 @@ section:nth-child(odd) .animate.scroll,
         pointer-events: none; /* inallow kuclick through it */
         background: var(--bg-colour);
         opacity: 0.6;
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact form .input-box .input-field {
+        width: 100%;
     }
 }
 
