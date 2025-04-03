@@ -1,6 +1,5 @@
 # wesleykuria.github.io
-Wesley Kuria's Developer Portfolio
-This is my personal portfolio website built for the PLP Academy Hackathon. It showcases my skills, projects, and background as an aspiring developer.
+This is my personal portfolio website. It showcases my skills, projects, and background as an aspiring developer.
 
 What's Inside
 About Me: Quick intro and my passion for tech
