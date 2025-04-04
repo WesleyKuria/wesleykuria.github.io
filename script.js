@@ -29,9 +29,9 @@ window.addEventListener('scroll', () => {
             sec.classList.add('show-animate');
         }
         
-        // else {
-        //     sec.classList.remove('show-animate');
-        // }
+        else {
+             sec.classList.remove('show-animate');
+         }
     });
 
     // Update all nav links
