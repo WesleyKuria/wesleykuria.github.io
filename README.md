@@ -36,7 +36,7 @@ Maybe try a React version later
 
 How to View
 The live version is hosted on GitHub Pages:
-wesleykuria.github.io
+[wesleykuria.github.io](url)
 
 To run locally:
 
