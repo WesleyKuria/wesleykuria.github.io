@@ -1,5 +1,5 @@
 # wesleykuria.github.io
-This is my personal portfolio website. It showcases my skills, projects, and background as an aspiring developer.
+This is my personal portfolio website. It showcases my skills, projects, and background as a developer.
 
 What's Inside
 About Me: Quick intro and my passion for tech
