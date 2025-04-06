@@ -958,6 +958,7 @@ section:nth-child(odd) .animate.scroll,
         pointer-events: none; /* inallow kuclick through it */
         background: var(--bg-colour);
         opacity: 0.6;
+    }
     .projects-container {
         grid-template-columns: 1fr;
     }
