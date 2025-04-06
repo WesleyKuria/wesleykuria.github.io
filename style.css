@@ -324,17 +324,17 @@ span {
 
 .about-img {
     position: relative;
-    width: 25rem; /* usiadjust */
+    width: 25rem;
     height: 25rem;
-    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0 auto 3rem; /* Centers the image container */
 }
 
 .about-img img {
     width: 90%;
-    border-radius: 50%; /* circular */
+    border-radius: 50%;
     border: 0.2rem solid var(--main-colour);
 }
 
@@ -1027,6 +1027,10 @@ section:nth-child(odd) .animate.scroll,
  }
 
 @keyframes showRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
     100% {
         transform: translateX(0);
         opacity: 1;
