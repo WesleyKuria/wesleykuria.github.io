@@ -914,47 +914,52 @@ section:nth-child(odd) .animate.scroll,
         min-height: 6rem; /* Minimum height for the header */
         z-index: 1000;
     }
-
     .navbar {
-        position: fixed; 
-        top: -100%; /* Start off-screen */
+        position: fixed;
+        top: -100%;
         left: 0;
         width: 100%;
-        height: 100vh; /* Full screen height for menu */
-        padding: 10rem 4% 4rem;
-        background: var(--bg-colour);
-        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.2);
-        z-index: 999;
-        transition: .5s ease;
+        height: 100vh;
+        background: var(--bg-color);
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        transition: top 0.5s ease;
+        z-index: 999;
     }
 
     .navbar.active {
-        top: 0; /* Bring menu into view */
+        top: 0;
     }
 
     .navbar a {
-        display: block;
-        font-size: 2.4rem;
-        margin: 2rem 0;
-        transform: translateX(0); /* Remove the translateX animation */
-        opacity: 0; /* Start invisible */
-        transition: opacity .5s ease;
+        margin: 1.5rem 0;
+        font-size: 2.5rem;
+        transform: translateY(-20px);
+        opacity: 0;
+        transition: transform 0.3s ease, opacity 0.3s ease;
     }
 
     .navbar.active a {
-        opacity: 1; /* Fade in */
-        transition-delay: calc(.1s * var(--i));
+        transform: translateY(0);
+        opacity: 1;
+        transition-delay: calc(0.1s * var(--i));
     }
 
     #menu-icon {
         display: block;
-        position: fixed; /* Keep menu icon fixed */
-        right: 4%;
-        top: 2rem;
-        z-index: 1001;
+        z-index: 1000;
+    }
+
+    #menu-icon.bx-x {
+        transform: rotate(180deg);
+    }
+
+    /* Prevent scrolling when menu is open */
+    body.no-scroll {
+        overflow: hidden;
     }
 }
 
