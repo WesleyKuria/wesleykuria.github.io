@@ -28,17 +28,19 @@ body {
     background: var(--bg-colour);
     color: var(--text-colour);
 }
+
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 1000;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background: var(--bg-colour);
-    padding: 2rem 4%;
+    padding: 2rem 9%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    transition: 0.3s ease-in-out;
 }
 
 .header.sticky {
@@ -50,15 +52,20 @@ body {
     font-weight: 600;
     background: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(10px); /* glass effect */
+}
 
 .navbar {
-    display: flex; /* Make sure it behaves as a flex container */
-    justify-content: space-between;
-    align-items: center;
+    z-index: 1001;
+    position: relative;
 }
 
 .navbar a {
-    margin: 0 2rem; /* Add margin as needed */
+    font-size: 1.7rem;
+    color: var(--text-colour);
+    font-weight: 500;
+    margin-left: 3.5rem;
+    transition: 0.3s;
+
 }
 
 .navbar a:hover,
@@ -106,7 +113,6 @@ section {
 .home-content h1 span {
     color: var(--main-colour);
 }
-
 .home-content .text-animate{
     position: relative;
     width: 32.8rem;
