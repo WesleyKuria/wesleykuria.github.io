@@ -35,7 +35,7 @@ body {
     left: 0;
     width: 100%;
     padding: 2rem 9%;
-    background: transparent;
+    background: var(--bg-colour); 
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -920,7 +920,7 @@ section:nth-child(odd) .animate.scroll,
         left: 0;
         width: 100%;
         height: 100vh;
-        background: var(--bg-color);
+        background: var(--bg-colour);
         display: flex;
         flex-direction: column;
         justify-content: center;
